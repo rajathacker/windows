@@ -1,0 +1,16 @@
+---
+- name: Running tasks on windows
+  hosts: all
+  tasks: 
+  - name: IIS Service Installed
+    win_feature:
+      name: Web-Server
+      state: present
+  - name: IIS Service Started
+    win_service: 
+      name: W3Svc
+      state: started
+  - name: Website index.html created
+    win_copy: 
+      content: "Hello World!"
+      dest: C:\Inetpub\wwwroot\index.html
