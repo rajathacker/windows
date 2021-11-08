@@ -14,3 +14,4 @@
     win_copy: 
       content: "Hello World!"
       dest: C:\Inetpub\wwwroot\index.html
+# This is a new line
